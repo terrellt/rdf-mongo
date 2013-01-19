@@ -215,7 +215,7 @@ module RDF
         # A pattern context of `false` is used to indicate the default context
         pm = pattern.to_mongo
         pm.merge!(:c => nil, :ct => :default) if pattern.context == false
-        puts "query using #{pm.inspect}"
+        #puts "query using #{pm.inspect}"
         @coll.find(pm) do |cursor|
           cursor.each do |data|
             block.call(RDF::Statement.from_mongo(data))
