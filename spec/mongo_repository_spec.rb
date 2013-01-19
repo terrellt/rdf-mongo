@@ -16,7 +16,7 @@ describe RDF::Mongo::Repository do
     end
 
     # @see lib/rdf/spec/repository.rb in RDF-spec
-    it_should_behave_like RDF_Repository
+    include RDF_Repository
   end
 
 end

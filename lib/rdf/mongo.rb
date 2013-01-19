@@ -205,6 +205,8 @@ module RDF
         !!@coll.find_one(RDF::Mongo::Conversion.to_mongo(value, :context))
       end
 
+      protected
+
       ##
       # @private
       # @see RDF::Queryable#query_pattern
