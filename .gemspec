@@ -23,11 +23,11 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version      = '>= 1.8.7'
   gem.requirements               = []
-  gem.add_runtime_dependency     'rdf',         '>= 0.3.4'
+  gem.add_runtime_dependency     'rdf',         '>= 1.0'
   gem.add_runtime_dependency     'mongo',       '>= 1.5.1'
-  gem.add_development_dependency 'rdf-spec',    '>= 0.3.4'
+  gem.add_development_dependency 'rdf-spec',    '>= 1.0'
   gem.add_development_dependency 'rspec',       '>= 2.12.0'
-  gem.add_development_dependency 'yard' ,       '>= 0.3.3'
+  gem.add_development_dependency 'yard' ,       '>= 0.8.3'
   gem.add_runtime_dependency     'addressable', '>= 2.3.2'
   gem.post_install_message       = "Have fun! :)"
 end
