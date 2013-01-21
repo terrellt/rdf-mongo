@@ -28,7 +28,9 @@ module RDF
     end
   end
   
-  module Mongo    
+  module Mongo
+    autoload :VERSION, "rdf/mongo/version"
+
     class Conversion
       ##
       # Translate an RDF::Value type to BSON key/value pairs.
@@ -37,7 +39,7 @@ module RDF
       #   URI, BNode or Literal. May also be a Variable or Symbol to indicate
       #   a pattern for a named context, or `false` to indicate the default context.
       #   A value of `nil` indicates a pattern that matches any value.
-      # @param [:subject, :predicate, :object, :context]
+      # @param [:subject, :predicate, :object, :context] place_in_statement
       #   Position within statement.
       # @return [Hash] BSON representation of the statement
       def self.to_mongo(value, place_in_statement)
@@ -105,7 +107,14 @@ module RDF
     end
 
     class Repository < ::RDF::Repository
+      # The Mongo database instance
+      # @!attribute [r] db
+      # @return [Mongo::DB]
       attr_reader :db
+
+      # The collection used for storing quads
+      # @!attribute [r] coll
+      # @return [Mongo::Collection]
       attr_reader :coll
       
       ##

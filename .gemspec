@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.date               = File.mtime('VERSION').strftime('%Y-%m-%d')
 
   gem.name               = 'rdf-mongo'
-  gem.homepage           = 'http://github.com/pius/rdf-mongo'
+  gem.homepage           = 'http://ruby-rdf/github.com/rdf-mongo'
   gem.license            = 'MIT License' if gem.respond_to?(:license=)
   gem.summary            = 'A storage adapter for integrating MongoDB and rdf.rb, a Ruby library for working with Resource Description Framework (RDF) data.'
   gem.description        = 'rdf-mongo is a storage adapter for integrating MongoDB and rdf.rb, a Ruby library for working with Resource Description Framework (RDF) data.'
