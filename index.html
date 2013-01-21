@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Rdf-mongo : RDF.rb storage adapter for MongoDB" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Rdf-mongo</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ruby-rdf/rdf-mongo">View on GitHub</a>
+
+          <h1 id="project_title">Rdf-mongo</h1>
+          <h2 id="project_tagline">RDF.rb storage adapter for MongoDB</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ruby-rdf/rdf-mongo/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ruby-rdf/rdf-mongo/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>rdf-mongo :: MongoDB storage adapter for RDF.rb</h1>
+
+<p>This is an RDF.rb storage adapter for MongoDB.</p>
+
+<p>See <a href="http://blog.datagraph.org/2010/04/rdf-repository-howto">http://blog.datagraph.org/2010/04/rdf-repository-howto</a> for an overview.</p>
+
+<h2>Versioning and backwards compatibility</h2>
+
+<p>Moving forward, the versioning will reflect the RDF.rb version number for which all rdf-specs are passing.</p>
+
+<p>It should also be noted that prior to 1.0, there are no guarantees of backwards compatibility for data stored using previous versions of the gem.  This is to make optimizing the schema for MongoDB easy.</p>
+
+<h2>Requirements</h2>
+
+<p>You'll need the 'mongo', 'rdf', 'rdf-spec', and 'rspec' libraries.  The easiest way to install these is via RubyGems.</p>
+
+<pre><code>$ sudo gem install mongo rdf rdf-spec rspec rdf-mongo
+</code></pre>
+
+<h2>Implementation Notes</h2>
+
+<p>RDF Statements are stored as individual documents within MONGO using the following BSON:</p>
+
+<pre><code>{
+  "s":  RDF::Value
+  "st": one of :u or :n
+  "p":  RDF::URI
+  "pt": must be :n
+  "o"   RDF::Value
+  "ot"  one of :u, :n, :l, :ll, or :lt
+  "ol"  Language symbol or RDF::URI
+  "c"   RDF::Value or false
+  "ct": one of :u, :n, :l, :ll, :lt or :default
+}
+</code></pre>
+
+<p>An alternative that may be examined at a later point would be to use a representation based on RDF/JSON,
+or JSON-LD. This would save documents based on a common subject with 
+one more more predicates having one or more types.</p>
+
+<h3>Support</h3>
+
+<p>Please post questions or feedback to the <a href="http://lists.w3.org/Archives/Public/public-rdf-ruby/">W3C-ruby-rdf mailing list</a>.</p>
+
+<h3>Authors</h3>
+
+<ul>
+<li>
+<a href="http://pius.me">Pius Uzamere</a> | <a href="mailto:pius@alum.mit.edu">pius@alum.mit.edu</a> | <a href="http://github.com/pius">http://github.com/pius</a> | <a href="http://pius.me">http://pius.me</a>
+</li>
+<li>
+<a href="http://greggkellogg.net/me">Gregg Kellogg</a> | <a href="mailto:gregg@greggkellogg.net">gregg@greggkellogg.net</a> | <a href="http://github.com/gkellogg">http://github.com/gkellogg</a> | <a href="http://greggkellogg.net">http://greggkellogg.net</a>
+</li>
+</ul><h3>Thank you</h3>
+
+<ul>
+<li>Ben Lavender (author of the adapter skeleton) | <a href="mailto:blavender@gmail.com">blavender@gmail.com</a> | <a href="http://github.com/bhuga">http://github.com/bhuga</a> | <a href="http://bhuga.net">http://bhuga.net</a> | <a href="http://blog.datagraph.org">http://blog.datagraph.org</a>
+</li>
+</ul><h3>License</h3>
+
+<p>MIT License</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rdf-mongo maintained by <a href="https://github.com/ruby-rdf">ruby-rdf</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
