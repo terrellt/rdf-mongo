@@ -176,6 +176,10 @@ module RDF
         @coll.count
       end
 
+      def clear_statements
+        @coll.remove
+      end
+
       ##
       # @private
       # @see RDF::Enumerable#has_statement?
