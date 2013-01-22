@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby -rubygems
 # -*- encoding: utf-8 -*-
 
+begin
+  RUBY_ENGINE
+rescue NameError
+  RUBY_ENGINE = "ruby"  # Not defined in Ruby 1.8.7
+end
+
 Gem::Specification.new do |gem|
   gem.version            = File.read('VERSION').chomp
   gem.date               = File.mtime('VERSION').strftime('%Y-%m-%d')
@@ -30,7 +36,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rdf-spec',    '>= 1.0'
   gem.add_development_dependency 'rspec',       '>= 2.12.0'
   gem.add_development_dependency 'yard' ,       '>= 0.8.3'
-  gem.add_development_dependency 'bson_ext' unless  RUBY_ENGINE == "jruby"
+  gem.add_development_dependency 'bson_ext' unless  defined?(:RUBY_ENGINE) && RUBY_ENGINE == "jruby"
 
   gem.post_install_message       = "Have fun! :)"
 end
