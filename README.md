@@ -1,5 +1,4 @@
-# rdf-mongo :: MongoDB storage adapter for RDF.rb
-[![Build Status](https://travis-ci.org/ruby-rdf/rdf-mongo.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-mongo)
+# rdf-mongo :: MongoDB storage adapter for RDF.rb [![Build Status](https://travis-ci.org/ruby-rdf/rdf-mongo.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-mongo)
 
 This is an RDF.rb storage adapter for MongoDB.
 
