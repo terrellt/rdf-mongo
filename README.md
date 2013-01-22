@@ -1,8 +1,9 @@
 # rdf-mongo :: MongoDB storage adapter for RDF.rb
 [![Build Status](https://travis-ci.org/ruby-rdf/rdf-mongo.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-mongo)
+
 This is an RDF.rb storage adapter for MongoDB.
 
-See <http://blog.datagraph.org/2010/04/rdf-repository-howto> for an overview.
+See <http://blog.datagraph.org/2010/04/rdf-repository-howto> for an overview of the general approach of creating RDF::Repository adaptors.
 
 ## Versioning and backwards compatibility
 
@@ -41,8 +42,8 @@ one more more predicates having one or more types.
 Please post questions or feedback to the [W3C-ruby-rdf mailing list][].
 
 ### Authors
- * [Pius Uzamere][] | <pius@alum.mit.edu> | <http://github.com/pius> | <http://pius.me>
- * [Gregg Kellogg][] | <gregg@greggkellogg.net> | <http://github.com/gkellogg> | <http://greggkellogg.net>
+ * [Pius Uzamere][] | <http://github.com/pius> | <http://pius.me>
+ * [Gregg Kellogg][] | <http://github.com/gkellogg> | <http://greggkellogg.net>
 
 ### Thank you
 
