@@ -4,7 +4,7 @@ This is an RDF.rb storage adapter for MongoDB.
 
 See <http://blog.datagraph.org/2010/04/rdf-repository-howto> for an overview of the general approach of creating RDF::Repository adaptors.
 
-[![Gem Version](https://badge.fury.io/rb/rdf-mongo.png)][gem]
+[![Gem Version](https://badge.fury.io/rb/rdf-mongo.png)](http://badge.fury.io/rb/rdf-mongo)
 [![Build Status](https://travis-ci.org/ruby-rdf/rdf-mongo.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-mongo)
 
 ## Versioning and backwards compatibility
