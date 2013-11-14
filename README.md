@@ -1,6 +1,6 @@
 # rdf-mongo :: MongoDB storage adapter for RDF.rb
 
-This is an RDF.rb storage adapter for MongoDB.
+This is an [RDF.rb][] storage adapter for MongoDB.
 
 See <http://blog.datagraph.org/2010/04/rdf-repository-howto> for an overview of the general approach of creating RDF::Repository adaptors.
 
@@ -9,7 +9,7 @@ See <http://blog.datagraph.org/2010/04/rdf-repository-howto> for an overview of 
 
 ## Versioning and backwards compatibility
 
-Moving forward, the versioning will reflect the RDF.rb version number for which all rdf-specs are passing.
+Moving forward, the versioning will reflect the [RDF.rb][] version number for which all rdf-specs are passing.
 
 It should also be noted that prior to 1.0, there are no guarantees of backwards compatibility for data stored using previous versions of the gem.  This is to make optimizing the schema for MongoDB easy.
 
@@ -74,3 +74,7 @@ MIT License
 [W3C-ruby-rdf mailing list]:        http://lists.w3.org/Archives/Public/public-rdf-ruby/
 [Pius Uzamere]: http://pius.me
 [Gregg Kellogg]: http://greggkellogg.net/me
+[RDF.rb]:           http://rdf.rubyforge.org/
+[YARD]:             http://yardoc.org/
+[YARD-GS]:          http://rubydoc.info/docs/yard/file/docs/GettingStarted.md
+[PDD]:              http://lists.w3.org/Archives/Public/public-rdf-ruby/2010May/0013.html
