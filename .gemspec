@@ -27,16 +27,22 @@ Gem::Specification.new do |gem|
   gem.test_files         = Dir.glob('spec/*.spec')
   gem.has_rdoc           = false
 
-  gem.required_ruby_version      = '>= 1.8.7'
+  gem.required_ruby_version      = '>= 1.9.2'
   gem.requirements               = []
-  gem.add_runtime_dependency     'rdf',         '>= 1.0'
-  gem.add_runtime_dependency     'mongo',       '>= 1.5.1'
-  gem.add_runtime_dependency     'addressable', '>= 2.3.2'
+  gem.add_runtime_dependency     'rdf',         '>= 1.1'
+  gem.add_runtime_dependency     'mongo',       '>= 1.8.6'
 
-  gem.add_development_dependency 'rdf-spec',    '>= 1.0'
-  gem.add_development_dependency 'rspec',       '>= 2.12.0'
-  gem.add_development_dependency 'yard' ,       '>= 0.8.3'
+  gem.add_development_dependency 'rdf-spec',    '>= 1.1'
+  gem.add_development_dependency 'rspec',       '>= 2.14.0'
+  gem.add_development_dependency 'yard' ,       '>= 0.8.7'
   gem.add_development_dependency 'bson_ext' unless  defined?(:RUBY_ENGINE) && RUBY_ENGINE == "jruby"
+
+  # Rubinius has it's own dependencies
+  if RUBY_ENGINE == "rbx" && RUBY_VERSION >= "2.1.0"
+    gem.add_runtime_dependency    "rubysl-base64"
+    gem.add_runtime_dependency    "rubysl-digest"
+    gem.add_development_dependency "rubysl-prettyprint"
+  end
 
   gem.post_install_message       = "Have fun! :)"
 end
