@@ -31,26 +31,33 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>rdf-mongo :: MongoDB storage adapter for RDF.rb</h1>
+        <h1>
+<a name="rdf-mongo--mongodb-storage-adapter-for-rdfrb" class="anchor" href="#rdf-mongo--mongodb-storage-adapter-for-rdfrb"><span class="octicon octicon-link"></span></a>rdf-mongo :: MongoDB storage adapter for RDF.rb</h1>
 
-<p>This is an RDF.rb storage adapter for MongoDB.</p>
+<p>This is an <a href="http://rdf.rubyforge.org/">RDF.rb</a> storage adapter for MongoDB.</p>
 
-<p>See <a href="http://blog.datagraph.org/2010/04/rdf-repository-howto">http://blog.datagraph.org/2010/04/rdf-repository-howto</a> for an overview.</p>
+<p>See <a href="http://blog.datagraph.org/2010/04/rdf-repository-howto">http://blog.datagraph.org/2010/04/rdf-repository-howto</a> for an overview of the general approach of creating RDF::Repository adaptors.</p>
 
-<h2>Versioning and backwards compatibility</h2>
+<p><a href="http://badge.fury.io/rb/rdf-mongo"><img src="https://badge.fury.io/rb/rdf-mongo.png" alt="Gem Version"></a>
+<a href="http://travis-ci.org/ruby-rdf/rdf-mongo"><img src="https://travis-ci.org/ruby-rdf/rdf-mongo.png?branch=master" alt="Build Status"></a></p>
 
-<p>Moving forward, the versioning will reflect the RDF.rb version number for which all rdf-specs are passing.</p>
+<h2>
+<a name="versioning-and-backwards-compatibility" class="anchor" href="#versioning-and-backwards-compatibility"><span class="octicon octicon-link"></span></a>Versioning and backwards compatibility</h2>
+
+<p>Moving forward, the versioning will reflect the <a href="http://rdf.rubyforge.org/">RDF.rb</a> version number for which all rdf-specs are passing.</p>
 
 <p>It should also be noted that prior to 1.0, there are no guarantees of backwards compatibility for data stored using previous versions of the gem.  This is to make optimizing the schema for MongoDB easy.</p>
 
-<h2>Requirements</h2>
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <p>You'll need the 'mongo', 'rdf', 'rdf-spec', and 'rspec' libraries.  The easiest way to install these is via RubyGems.</p>
 
 <pre><code>$ sudo gem install mongo rdf rdf-spec rspec rdf-mongo
 </code></pre>
 
-<h2>Implementation Notes</h2>
+<h2>
+<a name="implementation-notes" class="anchor" href="#implementation-notes"><span class="octicon octicon-link"></span></a>Implementation Notes</h2>
 
 <p>RDF Statements are stored as individual documents within MONGO using the following BSON:</p>
 
@@ -71,25 +78,46 @@
 or JSON-LD. This would save documents based on a common subject with 
 one more more predicates having one or more types.</p>
 
-<h3>Support</h3>
+<h3>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h3>
 
 <p>Please post questions or feedback to the <a href="http://lists.w3.org/Archives/Public/public-rdf-ruby/">W3C-ruby-rdf mailing list</a>.</p>
 
-<h3>Authors</h3>
+<h3>
+<a name="authors" class="anchor" href="#authors"><span class="octicon octicon-link"></span></a>Authors</h3>
 
 <ul>
 <li>
-<a href="http://pius.me">Pius Uzamere</a> | <a href="mailto:pius@alum.mit.edu">pius@alum.mit.edu</a> | <a href="http://github.com/pius">http://github.com/pius</a> | <a href="http://pius.me">http://pius.me</a>
+<a href="http://pius.me">Pius Uzamere</a> | <a href="http://github.com/pius">http://github.com/pius</a> | <a href="http://pius.me">http://pius.me</a>
 </li>
 <li>
-<a href="http://greggkellogg.net/me">Gregg Kellogg</a> | <a href="mailto:gregg@greggkellogg.net">gregg@greggkellogg.net</a> | <a href="http://github.com/gkellogg">http://github.com/gkellogg</a> | <a href="http://greggkellogg.net">http://greggkellogg.net</a>
+<a href="http://greggkellogg.net/me">Gregg Kellogg</a> | <a href="http://github.com/gkellogg">http://github.com/gkellogg</a> | <a href="http://greggkellogg.net">http://greggkellogg.net</a>
 </li>
-</ul><h3>Thank you</h3>
+</ul><h3>
+<a name="thank-you" class="anchor" href="#thank-you"><span class="octicon octicon-link"></span></a>Thank you</h3>
 
 <ul>
 <li>Ben Lavender (author of the adapter skeleton) | <a href="mailto:blavender@gmail.com">blavender@gmail.com</a> | <a href="http://github.com/bhuga">http://github.com/bhuga</a> | <a href="http://bhuga.net">http://bhuga.net</a> | <a href="http://blog.datagraph.org">http://blog.datagraph.org</a>
 </li>
-</ul><h3>License</h3>
+</ul><h3>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>This repository uses <a href="https://github.com/nvie/gitflow">Git Flow</a> to mange development and release activity. All submissions <em>must</em> be on a feature branch based on the <em>develop</em> branch to ease staging and integration.</p>
+
+<ul>
+<li>Do your best to adhere to the existing coding conventions and idioms.</li>
+<li>Don't use hard tabs, and don't leave trailing whitespace on any line.</li>
+<li>Do document every method you add using <a href="http://yardoc.org/">YARD</a> annotations. Read the
+<a href="http://rubydoc.info/docs/yard/file/docs/GettingStarted.md">tutorial</a> or just look at the existing code for examples.</li>
+<li>Don't touch the <code>.gemspec</code>, <code>VERSION</code> or <code>AUTHORS</code> files. If you need to
+change them, do so on your private branch only.</li>
+<li>Do feel free to add yourself to the <code>CREDITS</code> file and the corresponding
+list in the the <code>README</code>. Alphabetical order applies.</li>
+<li>Do note that in order for us to merge any non-trivial changes (as a rule
+of thumb, additions larger than about 15 lines of code), we need an
+explicit <a href="http://lists.w3.org/Archives/Public/public-rdf-ruby/2010May/0013.html">public domain dedication</a> on record from you.</li>
+</ul><h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
 <p>MIT License</p>
       </section>
