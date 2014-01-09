@@ -11,3 +11,4 @@ rvm:
   - rbx
 services:
   - mongodb
+cache: bundler
