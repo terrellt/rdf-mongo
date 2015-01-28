@@ -135,11 +135,8 @@ module RDF
         @coll = @db[options[:collection]]
         @coll.create_index("s")
         @coll.create_index("p")
-        @coll.create_index("o")
         @coll.create_index("c")
         @coll.create_index([["s", ::Mongo::ASCENDING], ["p", ::Mongo::ASCENDING]])
-        @coll.create_index([["s", ::Mongo::ASCENDING], ["o", ::Mongo::ASCENDING]])
-        @coll.create_index([["p", ::Mongo::ASCENDING], ["o", ::Mongo::ASCENDING]])
         super(options, &block)
       end
 
